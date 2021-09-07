@@ -12,8 +12,7 @@ router.get('/', async (req, res, next) => {
 })
 
 router.get('/:id', checkCarId, (req, res) => {
-    const car = Cars.getById()
-    res.status(200).json(car)
+    res.status(200).json(req.car)
 })
 
 router.post('/', checkCarPayload, checkVinNumberValid, checkVinNumberUnique, async (req, res, next) => {
