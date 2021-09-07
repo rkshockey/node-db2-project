@@ -8,7 +8,7 @@ module.exports = yup.object().shape({
     model: yup.string()
         .required('model is missing'),
     mileage: yup.number()
-        .require('mileage is missing'),
+        .required('mileage is missing'),
     title: yup.string(),
     transmission: yup.string()
 });
